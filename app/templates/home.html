@@ -1,0 +1,14 @@
+<main ng-controller="HomeCtrl as home">
+    <div class="nav">
+        <header class="nav-header">
+            <h1 class="nav-title">Bloc Chat</h1>
+        </header>
+        <!-- List of rooms -->
+
+        <div ng-repeat= "room in home.rooms">
+          <a class="room-name">{{ room.$value }}></a>
+        </div>
+
+
+  </div>
+</main>
