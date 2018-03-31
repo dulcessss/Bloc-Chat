@@ -5,6 +5,7 @@
     modal.submit = function () {
       Room.add(modal.newRoom.name);
       $uibModalInstance.close();
+      
     };
 
     modal.cancel = function(){

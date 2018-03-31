@@ -3,10 +3,14 @@
         <header>
             <h1>Bloc Chat</h1>
         </header>
+
+        <!-- new rooms -->
+        <button type="button" ng-click="home.newRoom()">New Room</button>
+
         <!-- List of rooms -->
 
         <div ng-repeat= "room in home.rooms">
-          <a class="room-name">{{ room.$value }}></a>
+          <a>{{ room.$value }}</a>
         </div>
 
 
