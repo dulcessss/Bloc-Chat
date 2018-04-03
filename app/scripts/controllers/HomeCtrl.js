@@ -3,11 +3,16 @@
       this.rooms = Room.all;
 
 
-  this.newRoom = function(){
-    $uibModal.open({
+  this.open = function(){
+    var modalInstance = $uibModal.open({
+      animation:true,
       templateUrl: '/templates/modal.html',
-      size: 'sm',
-      controller: 'ModalCtrl as modal'
+      controller: 'ModalCtrl as modal',
+      windowClass: 'modal-window'
+    });
+
+    modalInstance.result.then(function(name){
+      Room.add(name);
     });
   };
 

@@ -10,6 +10,10 @@
       rooms.$add(room);
     };
 
+    Room.createRoom = function(name){
+      rooms.$add(name);
+    };
+
     return Room;
   }
 
