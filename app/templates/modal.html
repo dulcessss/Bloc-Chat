@@ -1,14 +1,14 @@
 <section>
   <!-- <div ng-controller="ModalCtrl as modal"> -->
     <h3>Create New Room</h3>
-  
+
 
   <div>
     <form ng-submit="modal.createRoom(name)">
       <input ng-model="name">
 
       <button type="button" ng-click="modal.cancel()">Cancel</button>
-      <button type="submit">Create Room</button>
+      <button type="submit" ng-click="modal.createRoom()">Create Room</button>
     </form>
     </div>
   </section>

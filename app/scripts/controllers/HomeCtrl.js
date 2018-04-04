@@ -11,9 +11,7 @@
       windowClass: 'modal-window'
     });
 
-    modalInstance.result.then(function(name){
-      Room.add(name);
-    });
+  
   };
 
 }
