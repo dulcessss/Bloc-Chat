@@ -1,5 +1,6 @@
 <main ng-controller="HomeCtrl as home">
     <div>
+      <section class = "sidebar">
         <header>
             <h1>Bloc Chat</h1>
         </header>
@@ -10,8 +11,19 @@
         <!-- List of rooms -->
 
         <div ng-repeat= "room in home.rooms">
-          <a>{{ room.$value }}</a>
+          <a ng-click = "home.setCurrentRoom(room)">{{ room.$value }}</a>
         </div>
+
+        <h1>{{ home.currentRoom.$value }}</h1>
+        <div ng-repeat = "message in home.messages">
+          <p {{ message.username}}</p>
+          <p {{ mesage.sentAt | date : "shortTime" }}</p>
+          <p {{ message.content }}</p>
+        </div>
+
+</section>
+
+
 
 
   </div>
