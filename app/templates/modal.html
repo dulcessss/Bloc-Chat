@@ -1,14 +1,15 @@
-<section>
-  <!-- <div ng-controller="ModalCtrl as modal"> -->
-    <h3>Create New Room</h3>
 
-
-  <div>
-    <form ng-submit="modal.createRoom(name)">
-      <input ng-model="name">
-
-      <button type="button" ng-click="modal.cancel()">Cancel</button>
-      <button type="submit" ng-click="modal.createRoom()">Create Room</button>
-    </form>
+<section class="modal">
+    <div class="modal-header">
+        <h3>CREATE NEW ROOM</h3>
     </div>
-  </section>
+
+    <div class="modal-body">
+        <input type="text" placeholder="New Room Name" ng-model="modal.newRoom.name">
+    </div>
+
+    <div class="modal-footer">
+        <button class="modal-button" type="button" ng-click="modal.createRoom()">Create</button>
+        <button class="modal-button" type="button" ng-click="modal.cancel()">Cancel</button>
+    </div>
+</section>

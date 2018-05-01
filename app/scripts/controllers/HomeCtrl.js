@@ -1,38 +1,29 @@
 (function(){
   function HomeCtrl(Room, Message, $uibModal) {
       this.rooms = Room.all;
-      this.currentRoom = null;
-      this.messages = null;
-      this.newMessage = {
-        content: null,
-        roomId: null,
-        sentAt: null,
-        username: null
-      }
+    
 
 
-  this.open = function(){
-    var modalInstance = $uibModal.open({
-      animation:true,
-      templateUrl: '/templates/modal.html',
-      controller: 'ModalCtrl as modal',
-      windowClass: 'modal-window'
-    });
-  };
 
-    this.setCurrentRoom = function(room){
+      this.addRoom = function() {
+            $uibModal.open ({
+                templateUrl: '/templates/modal.html',
+                controller: 'ModalCtrl as modal'
+            });
+
+};
+
+
+    this.setRoom = function(room){
       this.currentRoom = room;
-      this.messages = Message.getByRoomId(room.$id);
+      this.currentMessages = Message.getByRoomId(this.currentRoom.$id);
+
     };
 
-  this.sendMessage = function (newMessage){
-    this.newMessage.roomId = this.currentRoom.$id;
-    this.newMessage.username = this.currentUser;
-    this.newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
-    console.log(this.currentUser);
-    console.log(this.currentRoom.$id);
-    Message.send(this.newMessage);
-  };
+  //this.sendMessage = function (){
+    //this.newMessage.roomId = this.currentRoom.$id;
+    //Message.send(this.newMessage);
+  //};
 
 
 }

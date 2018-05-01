@@ -1,30 +1,31 @@
 <main ng-controller="HomeCtrl as home">
-    <div>
-      <section class = "sidebar">
-        <header>
+
+<div class="wrapper">
+    <div class = "menu">
+        <header class = "nav-header">
             <h1>Bloc Chat</h1>
         </header>
 
         <!-- new rooms -->
-        <button type="button" ng-click="home.open()">New Room</button>
+        <button type="button" ng-click="home.addRoom()">New Room</button>
+
 
         <!-- List of rooms -->
 
-        <div ng-repeat= "room in home.rooms">
-          <a ng-click = "home.setCurrentRoom(room)">{{ room.$value }}</a>
+        <div class = "rooms" ng-repeat= "room in home.rooms">
+          <a ng-click = "home.setRoom(room)">{{ room.$value }}</a>
         </div>
+    </div>
 
-        <h1>{{ home.currentRoom.$value }}</h1>
-        <div ng-repeat = "message in home.messages">
-          <p {{ message.username}}</p>
-          <p {{ mesage.sentAt | date : "shortTime" }}</p>
-          <p {{ message.content }}</p>
-        </div>
+<div class = "content">
+  <h2>{{ home.currentRoom.$value }}</h2>
+    <div ng-repeat = "message in home.currentMessages">
+      <p {{ message.username }}</p>
+      <p {{ message.content }}</p>
+      <p {{ mesage.sentAt | date : "shortTime" }}</p>
 
-</section>
+    </div>
+</div>
 
-
-
-
-  </div>
+</div>
 </main>
