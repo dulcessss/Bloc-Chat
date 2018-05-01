@@ -19,7 +19,7 @@
 
 <div class = "content">
   <h2>{{ home.currentRoom.$value }}</h2>
-    <div ng-repeat = "message in home.currentMessages">
+    <div class= "messsages" ng-repeat = "message in home.currentMessages">
       <p {{ message.username }}</p>
       <p {{ message.content }}</p>
       <p {{ mesage.sentAt | date : "shortTime" }}</p>

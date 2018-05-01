@@ -1,7 +1,7 @@
 (function(){
   function HomeCtrl(Room, Message, $uibModal) {
       this.rooms = Room.all;
-    
+
 
 
 

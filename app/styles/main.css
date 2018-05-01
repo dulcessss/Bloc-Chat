@@ -24,6 +24,16 @@
 
   }
 
+  .messages {
+    font-family: sans-serif;
+    color: pink;
+    font-size: 50px;
+    position: relative;
+    z-index: 3;
+
+
+  }
+
   button {
     background-color: #7D7F7F;
     color: white;
