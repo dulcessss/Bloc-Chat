@@ -27,11 +27,7 @@
   .messages {
     font-family: sans-serif;
     color: pink;
-    font-size: 50px;
-    position: relative;
-    z-index: 3;
-
-
+    font-size: 38px;
   }
 
   button {
