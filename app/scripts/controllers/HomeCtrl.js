@@ -21,10 +21,10 @@
 
     };
 
-  //this.sendMessage = function (){
-    //this.newMessage.roomId = this.currentRoom.$id;
-    //Message.send(this.newMessage);
-  //};
+    this.sendMessage = function (){
+    this.newMessage.roomId = this.currentRoom.$id;
+    Message.send(this.newMessage);
+  };
 
 
 }

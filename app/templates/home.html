@@ -18,16 +18,25 @@
         </div>
     </div>
 
+    <!-- Showing Messages -->
+
 <div class = "content">
   <h2>{{ home.currentRoom.name }}</h2>
   <h2>{{ home.currentRoom.$value }}</h2>
     <div class= "messsages" ng-repeat = "message in home.currentMessages">
       <p> {{ message.username }}</p>
       <p> {{ message.content }}</p>
-      <p> {{ mesage.sentAt | date : "shortTime" }}</p>
+      <p> {{ mesage.sentAt }}</p>
 
     </div>
 </div>
+
+  <!-- Send Messages -->
+
+  <div class="chat-area">
+    <input type="text" id="input-box" class="chat-input" placeholder="Type Message Here" ng-model="home.newMessage.content">
+    <button type="button" class="send-button" ng-click="home.sendMessage()">Send</button>
+  </div>
 
 </div>
 </main>
