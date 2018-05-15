@@ -13,11 +13,13 @@
         <!-- List of rooms -->
 
         <div class = "rooms" ng-repeat= "room in home.rooms">
+          <a ng-click = "home.setRoom(room)">{{ room.name }}</a>
           <a ng-click = "home.setRoom(room)">{{ room.$value }}</a>
         </div>
     </div>
 
 <div class = "content">
+  <h2>{{ home.currentRoom.name }}</h2>
   <h2>{{ home.currentRoom.$value }}</h2>
     <div class= "messsages" ng-repeat = "message in home.currentMessages">
       <p> {{ message.username }}</p>
