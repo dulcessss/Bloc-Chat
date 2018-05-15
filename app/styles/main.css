@@ -86,3 +86,40 @@
     margin-right: 20px
 
   }
+
+  .login-button {
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px
+  }
+
+  .login-input {
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+
+  .chat-area {
+    right: 250px;
+    width: 50%;
+    bottom: 10px;
+    position: fixed;
+  }
+
+  .send-button {
+    right: 20px;
+  }
+
+  .chat-input {
+    height: 40px;
+    border: 3px solid gray;
+    text-align: center;
+  }
+
+  input[id="input-box"] {
+    width: 600px;
+  }

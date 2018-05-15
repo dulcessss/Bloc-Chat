@@ -10,9 +10,9 @@
       return $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
     };
 
-    //Message.send = function(newMessage) {
-      //messages.$add(newMessage);
-    //};
+    Message.send = function(newMessage) {
+      messages.$add(newMessage);
+    };
 
     return Message;
   }
