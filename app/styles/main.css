@@ -24,6 +24,11 @@
 
   }
 
+  .room-name {
+    text-align: center;
+    font-size: 40px;
+  }
+
   .messages {
     font-family: sans-serif;
     color: pink;
@@ -122,4 +127,24 @@
 
   input[id="input-box"] {
     width: 600px;
+  }
+
+  .message {
+    background-color: #E8E8E8;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+  }
+
+  .username {
+    margin-bottom: -15px;
+    color: #A9A9A9;
+    font-style: italic;
+  }
+
+  .time {
+    color: #A9A9A9;
+    font-style: italic;
+    font-size: 11px;
+    margin-top: -15px;
   }

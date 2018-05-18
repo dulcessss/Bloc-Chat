@@ -21,8 +21,11 @@
 
     };
 
+
     this.sendMessage = function (){
     this.newMessage.roomId = this.currentRoom.$id;
+    this.newMessage.username = this.currentUser;
+    this.newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
     Message.send(this.newMessage);
   };
 
